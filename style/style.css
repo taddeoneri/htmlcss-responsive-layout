@@ -11,13 +11,14 @@
     --bg-card: #B5DDFF;
     --contrast-color: #FCC060;
     --text-card: #5A6E7F;
+    --black: #000000;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
     font-family: 'PT Sans', sans-serif;
-    background-color: va;
+    background-color: var(--light-color);
 }
 /* utility */
 .d-flex{
@@ -44,7 +45,7 @@ img{
     padding: 28px 0px;
 }
 .container{
-    padding: 44px 30px;
+    padding: 44px 35px;
 }
 /* header */
 header{
@@ -126,4 +127,31 @@ main{
     border-radius: 50%;
     background-color: var(--primary-color);
     padding: 15px 20px;
+    color: var(--black);
 }
+/* testimonial */
+.box-image{
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.box-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.feedback{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 30px;
+    padding: 35px 15px;
+    margin-bottom: 40px;
+}
+.feedback p{
+    padding: 25px 0px;
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+
