@@ -10,6 +10,7 @@
     --primary-color: #9792E4;
     --bg-card: #B5DDFF;
     --contrast-color: #FCC060;
+    --text-card: #5A6E7F;
 }
 html{
     scroll-behavior: smooth;
@@ -33,6 +34,18 @@ ul{
 img{
     max-width: 100%;
 }
+.text-center{
+    text-align: center;
+}
+.p-card{
+    padding: 38px;
+}
+.p-28{
+    padding: 28px 0px;
+}
+.container{
+    padding: 44px 30px;
+}
 /* header */
 header{
     background-color: var(--secondary-color);
@@ -45,12 +58,16 @@ header{
 header nav{
     height: 80px;
 }
-/* header nav ul{
-    /* display: none; 
-} */
+header nav ul{
+    display: none; 
+}
 header nav a{
     color: white;
 }
+header nav i{
+    font-size: 1.5rem;
+}
+/* main */
 main{
     margin-top: 80px;
 }
@@ -63,12 +80,50 @@ main{
     margin-bottom: 15px;
 }
 .card-left{
-    padding: 35px;
+    padding: 38px;
 }
 .card-right{
     width: 50%;
-   
+    margin: 0 auto;
 }
-#intro .container{
-    padding: 44px 30px;
+.card-left p{
+    color: var(--text-card);
+}
+.card h3{
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+.p-card i{
+    font-size: 5rem;
+    color: var(--secondary-color);
+}
+/* planning */
+.planning-left{
+    color: var(--light-color);
+    padding: 30px 0px;
+}
+.planning-right{
+    background-color: var(--light-color);
+    border-radius: 50px;
+    color: var(--dark-color);
+    padding: 50px 20px;
+}
+.planning-left h2{
+    font-size: 2rem;
+    padding: 70px 0px 48px 0px;
+}
+.planning-right h3{
+    padding: 20px 0px;
+    font-size: 1.5rem;
+}
+.planning-right p{
+    font-style: italic;
+    font-size: 1.1rem;
+    padding-bottom: 70px;
+}
+.planning-right a{
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    padding: 15px 20px;
 }
