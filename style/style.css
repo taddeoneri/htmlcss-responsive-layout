@@ -15,6 +15,7 @@
 }
 html{
     scroll-behavior: smooth;
+    line-height: 1.9rem;
 }
 body{
     font-family: 'PT Sans', sans-serif;
@@ -134,7 +135,7 @@ main{
     margin: 0 auto;
 }
 .card-right img{
-    margin-bottom: -4px;
+    margin-bottom: -10px;
 }
 .card p{
     color: var(--text-card);
@@ -271,6 +272,7 @@ main{
 footer{
     background-color: var(--dark-color);
     color: var(--light-color);
+    line-height: 1rem;
 }
 footer a{
     text-decoration: underline;
@@ -351,10 +353,16 @@ footer a{
     #features .card{
         width: calc((100% / 3) - 20px);
     }
+    footer .container{
+        max-width: 750px;
+    }
 }
 @media screen and (min-width: 1200px){
     .container{
         max-width: 1140px;
+    }
+    footer .container{
+        max-width: 750px;
     }
 }
 
