@@ -20,15 +20,13 @@ body{
     font-family: 'PT Sans', sans-serif;
     background-color: var(--light-color);
 }
+section{
+    scroll-margin-top: 80px;
+}
+a{
+    text-decoration: none;
+}
 /* utility */
-.d-flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.container{
-    padding: 15px;
-}
 ul{
     list-style: none;
 }
@@ -46,6 +44,25 @@ img{
 }
 .container{
     padding: 44px 35px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.m-auto{
+    margin: 0 auto;
+}
+.btn{
+    display: inline-block;
+    padding: 6px 30px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.uppercase{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.p-top-bottom-20{
+    padding: 20px 0px;
 }
 /* header */
 header{
@@ -58,6 +75,9 @@ header{
 }
 header nav{
     height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 header nav ul{
     display: none; 
@@ -76,9 +96,11 @@ main{
     background-color: var(--primary-color);
 }
 .card{
-    background-color: var(--bg-card);
     border-radius: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+}
+#intro .card{
+    background-color: var(--bg-card);
 }
 .card-left{
     padding: 38px;
@@ -87,7 +109,7 @@ main{
     width: 50%;
     margin: 0 auto;
 }
-.card-left p{
+.card p{
     color: var(--text-card);
 }
 .card h3{
@@ -131,9 +153,8 @@ main{
 }
 /* testimonial */
 .box-image{
-    width: 230px;
-    height: 230px;
-    margin: 0 auto;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -154,4 +175,110 @@ main{
     line-height: 2rem;
     font-size: 1.3rem;
 }
+/* features */
+#features{
+    background-color: var(--primary-color);
+}
+#features .card{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+#features h1{
+    text-align: center;
+    color: var(--light-color);
+    font-size: 2.2rem;
+}
+#features h2{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+#features h3{
+    color: var(--primary-color);
+    padding: 24px 0px;
+}
+#features p{
+    padding-bottom: 20px;
+}
+/* about us */
+#about-us h1{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+#about-us p{
+    padding-top: 30px;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+.about-left{
+    margin-top: 40px;
+}
+.about-left h2{
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    padding: 25px 0px;
+}
+/* call to action */
+#call-to-action{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+#call-to-action h5{
+    font-size: 3.1rem;
+    color: var(--contrast-color);
+}
+#call-to-action h2{
+    font-size: 2rem;
+    padding: 15px 0px 26px 0px;
+}
+/* footer */
+footer{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+footer p:first-child{
+    padding-bottom: 50px;
+}
+/* responsive */
+@media screen and (min-width: 768px){
+    .container{
+        max-width: 750px;
+    }
+    .d-flex{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 10px;
+    }
+    #intro .card{
+        width: calc((100% / 3) - 10px);
+    }
+    #intro .card:first-child{
+        width: calc((100% / 3 * 2) - 10px);
+    }
+    #features .card{
+        width: calc((100% / 2) - 10px);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        max-width: 940px;
+    }
+    .h-menu{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+    }
+    .inner-flex{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+    }
+}
+
 
