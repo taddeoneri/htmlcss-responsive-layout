@@ -53,7 +53,7 @@ img{
 .btn{
     display: inline-block;
     padding: 6px 30px;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: var(--primary-color);
     color: var(--light-color);
 }
@@ -73,6 +73,9 @@ img{
 .p-bottom-50{
     padding-bottom: 50px;
 }
+.p-right-10{
+    padding-right: 10px;
+}
 /* header */
 header{
     background-color: var(--secondary-color);
@@ -88,6 +91,9 @@ header nav{
     justify-content: space-between;
     align-items: center;
 }
+header li:hover{
+    text-decoration: underline;
+}
 header nav ul{
     display: none; 
 }
@@ -97,9 +103,18 @@ header nav a{
 header nav i{
     font-size: 1.5rem;
 }
+header .btn{
+    padding: 8px 15px;
+    background-color: var(--light-color);
+    color: var(--black);
+}
 /* main */
 main{
     margin-top: 80px;
+}
+/* intro */
+#intro .btn{
+    background-color: var(--secondary-color);
 }
 .bg-even{
     background-color: var(--primary-color);
@@ -223,13 +238,16 @@ main{
 #about-us p{
     padding-top: 30px;
 }
-.about-left{
+.about-right{
     margin-top: 40px;
 }
-.about-left h2{
+.about-right h2{
     font-size: 1.8rem;
     color: var(--primary-color);
     padding: 25px 0px;
+}
+#about-us .btn{
+    padding: 8px 15px;
 }
 /* call to action */
 #call-to-action{
@@ -243,6 +261,11 @@ main{
 #call-to-action h2{
     font-size: 2rem;
     padding: 15px 0px 26px 0px;
+}
+#call-to-action .btn{
+    color: var(--primary-color);
+    background-color: var(--light-color);
+    padding: 20px 50px;
 }
 /* footer */
 footer{
@@ -269,9 +292,6 @@ footer a{
     #intro .card:first-child{
         width: calc((100% / 3 * 2) - 10px);
     }
-    .planning-left h2{
-        font-size: 4rem;
-    }
     #features .card{
         width: calc((100% / 2) - 10px);
     }
@@ -284,8 +304,22 @@ footer a{
         flex-wrap: nowrap;
         align-items: center;
     }
+    #about-us .d-flex{
+        flex-wrap: nowrap;
+    }
+    .about-left{
+        margin-top: 40px;
+        width: 60%;
+    }
+    .about-right{
+        width: 30%;
+    }
 }
-
+@media screen and (max-width: 992px){
+    .planning-left h2{
+        font-size: 4rem;
+    }
+}
 @media screen and (min-width: 992px){
     .container{
         max-width: 940px;
@@ -295,11 +329,27 @@ footer a{
     }
     header nav ul{
         display: flex;
+        align-items: center;
+    }
+    header nav li{
+        padding-left: 30px;
     }
     .inner-flex{
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+    }
+    .card-left, #intro .card-right{
+        width: calc(50% - 10px);
+    }
+    #planning .inner-flex{
+        align-items: flex-end;
+    }
+    .planning-left, .planning-right{
+        width: calc(50% - 10px);
+    }
+    #features .card{
+        width: calc((100% / 3) - 20px);
     }
 }
 @media screen and (min-width: 1200px){
